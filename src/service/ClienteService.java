@@ -5,9 +5,9 @@ import repository.ClienteRepository;
 
 public class ClienteService {
 	
-	public Cliente GetCliente() {		
+	public Cliente GetCliente(int indice) {		
 		ClienteRepository repository = new ClienteRepository();		
-		Cliente result = repository.GetCliente();		
+		Cliente result = repository.GetCliente(indice);		
 		
 		result.Imc = result.Peso / (result.Altura * result.Altura);		
 		return result;		
